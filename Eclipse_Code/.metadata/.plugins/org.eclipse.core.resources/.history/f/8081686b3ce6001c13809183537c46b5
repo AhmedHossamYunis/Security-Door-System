@@ -1,0 +1,78 @@
+/*
+ * HMI_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "HMI_header.h"
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+/* one overflow --> 256 msec */
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_1024, NORMAL_MATCH, 0,255};
+
+
+int main()
+{
+	uint8 state = INITIAL;
+	uint8 check = WRONG;
+	uint8 notCorrectPassword = 0;
+
+	HMI_driversInit();
+	LCD_displayStringRowColumn(0,0,"New Password");
+
+
+	while(1)
+	{
+		check = WRONG;
+
+		while((state == INITIAL) && (check == WRONG))
+		{
+			HMI_setNewPassword();
+			HMI_confirmPassword();
+			check = HMI_matchPassword();
+			 if (check != WRONG)
+			 {
+				 HMI_confirmPasswordIsSaved();
+			 }
+			 else if (check == WRONG)
+			 {
+				 LCD_displayStringRowColumn(0,0,"Not Matched");
+			 }
+		}
+
+		check = HMI_enterPassword();
+		if(check == WRONG)
+		{
+			notCorrectPassword++;
+			if(notCorrectPassword >= 3)
+			{
+				/*think here*/
+			}
+		}
+		else
+		{
+			HMI_mainOptions();
+			state = HMI_chooseOption();
+
+			if((state == OPEN_DOOR) && (check != WRONG))
+			{
+				TIMER_SetCallBack(HMI_checkOpenDoor);
+				TIMER_init(&config_Timer);
+				TIMER_SetCallBack(HMI_checkCloseDoor);
+				TIMER_Deinit();
+			}
+			else if ((state == CHANGE_PASSWORD) && (check != WRONG))
+			{
+				HMI_setNewPassword();
+				HMI_confirmPassword();
+				HMI_matchPassword();
+				HMI_confirmPasswordIsSaved();
+			}
+		}
+
+	}
+
+
+}
+

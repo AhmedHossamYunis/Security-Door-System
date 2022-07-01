@@ -1,0 +1,214 @@
+/*
+ * HMI_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "KEYPAD.h"
+#include "LCD.h"
+#include "Timer.h"
+#include "USART.h"
+
+
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_8, NORMAL_MATCH, 0,255};
+
+#define ARRAY_SIZE 5
+#define WRONG 0
+#define OPEN_DOOR 1
+#define CHANGE_PASSWORD 2
+#define START_SEND 3
+#define NOT_START_SEND 4
+
+/* 1- initialize new password.              --> done
+ * 2- main options                          --> done
+ * 3- open door                             --> done
+ * 4- close door							--> done
+ * 5- set password							--> done
+ * 6- confirm saved password				--> done
+ * 7- confirm passsword						--> done
+ * 8- check match.							--> done
+ * 9- enter password						--> done
+ * 10- error message during wrong key
+ * 11- user options                          --> done
+ * 12- initialize drivers                    --> done
+ *
+ * */
+
+void HMI_driversInit(void)
+{
+	LCD_init();
+	USART_init(&config_UART);
+	TIMER_init(&config_Timer);
+	sei();
+
+	return;
+}
+
+void HMI_mainOptions(void)
+{
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0, 0, "+: Open Door");
+	LCD_displayStringRowColumn(1, 0, "+: Change Pass");
+
+	return;
+}
+
+void HMI_checkOpenDoor(void)
+{
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0, 0, "Door is open");
+	return;
+}
+
+void HMI_checkCloseDoor(void)
+{
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0, 0, "Door is closed");
+	return;
+}
+
+uint8 HMI_chooseOption(void)
+{
+	uint8 key_option;
+	key_option = KEYPAD_getPressedKey();
+	_delay_ms(500);
+	if((key_option == '+') || (key_option == '-'))
+	{
+		if(key_option == '+')
+		{
+			USART_sendByte(OPEN_DOOR);
+			return OPEN_DOOR;
+		}
+		else
+		{
+			USART_sendByte(CHANGE_PASSWORD);
+			return CHANGE_PASSWORD;
+		}
+	}
+	return -1;
+}
+
+void HMI_setNewPassword(void)
+{
+	uint8 password[ARRAY_SIZE+2];
+	uint8 i;
+
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"New Password");
+	LCD_setCurser(1,0);
+
+	for(i=0; i<ARRAY_SIZE; i++)
+	{
+		password[i] = KEYPAD_getPressedKey();
+		_delay_ms(500);
+		LCD_setCurser(1,i);
+		LCD_displayString('*');
+	}
+	password[i] = '#';
+	i++;
+	password[i] = '\0';
+
+	USART_sendByte(START_SEND);
+	USART_sendString(password);
+	LCD_clearScreen();
+	return;
+}
+
+void HMI_confirmPasswordIsSaved(void)
+{
+	uint8 check_saved;
+
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Password is");
+
+	USART_sendByte(START_SEND);
+	check_saved = USART_receiveByte();
+
+	if(check_saved == 5)
+	{
+		LCD_displayStringRowColumn("saved");
+	}
+	else
+	{
+		LCD_displayStringRowColumn("not saved");
+	}
+	return;
+}
+
+void HMI_confirmPassword(void)
+{
+	uint8 password_confirm[ARRAY_SIZE+2];
+	uint8 i;
+
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Confirm Password");
+	LCD_setCurser(1,0);
+
+	for(i=0; i<ARRAY_SIZE; i++)
+	{
+		password_confirm[i] = KEYPAD_getPressedKey();
+		_delay_ms(500);
+		LCD_setCurser(1,i);
+		LCD_displayString('*');
+	}
+	password_confirm[i] = '#';
+	i++;
+	password_confirm[i] = '\0';
+
+	USART_sendByte(START_SEND);
+	USART_sendString(password_confirm);
+	LCD_clearScreen();
+	return;
+
+}
+
+
+
+uint8 HMI_matchPassword(void)
+{
+	USART_sendByte(START_SEND);
+
+	if(USART_receiveByte() != NOT_START_SEND)
+	{
+		return WRONG;
+	}
+	else
+	{
+		return START_SEND;
+	}
+}
+
+uint8 HMI_enterPassword(void)
+{
+	uint8 i;
+	uint8 writePassword[ARRAY_SIZE+2];
+
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Enter Password");
+	LCD_setCurser(1,0);
+
+	for(i=0; i<ARRAY_SIZE; i++)
+	{
+		writePassword = KEYPAD_getPressedKey();
+		_delay_ms(500);
+		LCD_setCurser(1,i);
+		LCD_displayString('*');
+	}
+	writePassword[i] = '#';
+	i++;
+	writePassword[i] = '\0';
+	USART_sendByte(START_SEND);
+	USART_sendString(writePassword);
+	USART_sendByte(START_SEND);
+	return (USART_receiveByte());
+}
+
+
+int main()
+{
+
+}
+

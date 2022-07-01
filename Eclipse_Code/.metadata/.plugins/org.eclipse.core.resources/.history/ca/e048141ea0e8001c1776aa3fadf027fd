@@ -1,0 +1,47 @@
+/*
+ * Control_header.h
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+
+#ifndef CONTROL_HEADER_H_
+#define CONTROL_HEADER_H_
+
+#include "Buzzer.h"
+#include "EEPROM.h"
+#include "USART.h"
+#include "MOTOR.h"
+#include "Timer.h"
+
+#define WRONG        0
+#define INITIAL      1
+#define READY        2
+#define OPEN_DOOR    3
+#define CLOSE_DOOR   4
+#define CHANGE_PASS  5
+#define SAVED        6
+#define NOT_SAVED    7
+#define MATCH        8
+#define NOT_MATCH    9
+#define ALARM        10
+#define OPEN_MOTOR_TIMER_PER_SECOND 60
+
+
+#define ARR_SIZE     5
+
+
+
+uint8 CONTROL_receivePass(void);
+
+uint8 CONTROL_matchPassword(void);
+
+void storePassword(char *pass_ptr);
+
+void CONTROL_motorProcessing(void);
+
+
+
+
+
+#endif /* CONTROL_HEADER_H_ */

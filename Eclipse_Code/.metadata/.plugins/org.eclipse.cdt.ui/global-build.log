@@ -1,0 +1,1733 @@
+21:21:22 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:21:44 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:21:45 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:22:13 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:22:14 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:22:39 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:22:40 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:23:00 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:23:01 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:23:21 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:23:21 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:19 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:20 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13278 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:29 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:29 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:44 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:44 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:58 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:24:58 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:13 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:14 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:31 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:31 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:42 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:42 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:55 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:25:55 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:262: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:27:53 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:27:53 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:264: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:31:18 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:31:18 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:265: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13270 bytes (81.0% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:36:34 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:36:34 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13262 bytes (80.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:38:06 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:38:06 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:265: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13262 bytes (80.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:38:14 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9580 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:         38 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+21:38:14 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:265: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13262 bytes (80.9% Full)
+(.text + .data + .bootloader)
+
+Data:        282 bytes (27.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:11:08 **** Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Buzzer.d" -MT"Buzzer.o" -c -o "Buzzer.o" "../Buzzer.c"
+In file included from ../Buzzer.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Buzzer.c
+ 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building file: ../EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"EEPROM.d" -MT"EEPROM.o" -c -o "EEPROM.o" "../EEPROM.c"
+Finished building: ../EEPROM.c
+ 
+Building file: ../I2C.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"I2C.d" -MT"I2C.o" -c -o "I2C.o" "../I2C.c"
+Finished building: ../I2C.c
+ 
+Building file: ../MAIN2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN2.d" -MT"MAIN2.o" -c -o "MAIN2.o" "../MAIN2.c"
+In file included from ../Control_header.h:20,
+                 from ../MAIN2.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MAIN2.c
+ 
+Building file: ../MOTOR.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MOTOR.d" -MT"MOTOR.o" -c -o "MOTOR.o" "../MOTOR.c"
+Finished building: ../MOTOR.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER_SetCallBack':
+../Timer.c:280: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER1_SetCallBack':
+../Timer.c:289: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9652 bytes (58.9% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:11:10 **** Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:265: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_intgerToString':
+../LCD.c:152: warning: implicit declaration of function 'itoa'
+Finished building: ../LCD.c
+ 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER_SetCallBack':
+../Timer.c:280: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER1_SetCallBack':
+../Timer.c:289: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+Finished building: ../keypad.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13318 bytes (81.3% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:12:50 **** Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Buzzer.d" -MT"Buzzer.o" -c -o "Buzzer.o" "../Buzzer.c"
+In file included from ../Buzzer.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Buzzer.c
+ 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building file: ../EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"EEPROM.d" -MT"EEPROM.o" -c -o "EEPROM.o" "../EEPROM.c"
+Finished building: ../EEPROM.c
+ 
+Building file: ../I2C.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"I2C.d" -MT"I2C.o" -c -o "I2C.o" "../I2C.c"
+Finished building: ../I2C.c
+ 
+Building file: ../MAIN2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN2.d" -MT"MAIN2.o" -c -o "MAIN2.o" "../MAIN2.c"
+In file included from ../Control_header.h:20,
+                 from ../MAIN2.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MAIN2.c
+ 
+Building file: ../MOTOR.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MOTOR.d" -MT"MOTOR.o" -c -o "MOTOR.o" "../MOTOR.c"
+Finished building: ../MOTOR.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER_SetCallBack':
+../Timer.c:280: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER1_SetCallBack':
+../Timer.c:289: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9624 bytes (58.7% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:12:55 **** Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:265: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD.c
+ 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER_SetCallBack':
+../Timer.c:280: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER1_SetCallBack':
+../Timer.c:289: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+Finished building: ../keypad.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13318 bytes (81.3% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:42:37 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Buzzer.d" -MT"Buzzer.o" -c -o "Buzzer.o" "../Buzzer.c"
+In file included from ../Buzzer.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Buzzer.c
+ 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building file: ../EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"EEPROM.d" -MT"EEPROM.o" -c -o "EEPROM.o" "../EEPROM.c"
+Finished building: ../EEPROM.c
+ 
+Building file: ../I2C.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"I2C.d" -MT"I2C.o" -c -o "I2C.o" "../I2C.c"
+Finished building: ../I2C.c
+ 
+Building file: ../MAIN2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN2.d" -MT"MAIN2.o" -c -o "MAIN2.o" "../MAIN2.c"
+In file included from ../Control_header.h:20,
+                 from ../MAIN2.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../MAIN2.c
+ 
+Building file: ../MOTOR.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MOTOR.d" -MT"MOTOR.o" -c -o "MOTOR.o" "../MOTOR.c"
+Finished building: ../MOTOR.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER_SetCallBack':
+../Timer.c:280: error: void value not ignored as it ought to be
+../Timer.c: In function 'TIMER1_SetCallBack':
+../Timer.c:289: error: void value not ignored as it ought to be
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+make: *** [Timer.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:42:39 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+../HMI_functions.c: In function 'HMI_chooseOption':
+../HMI_functions.c:265: warning: control reaches end of non-void function
+Finished building: ../HMI_functions.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD.c
+ 
+Building file: ../MAIN.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MAIN.d" -MT"MAIN.o" -c -o "MAIN.o" "../MAIN.c"
+Finished building: ../MAIN.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER_SetCallBack':
+../Timer.c:280: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER1_SetCallBack':
+../Timer.c:289: warning: function return types not compatible due to 'volatile'
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+Finished building: ../keypad.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13304 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:43:02 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c: In function 'TIMER2_SetCallBack':
+../Timer.c:298: warning: function return types not compatible due to 'volatile'
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9624 bytes (58.7% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:43:04 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13304 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:43:15 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+Finished building: ../Timer.c
+ 
+Building target: Control_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU2.map -mmcu=atmega16 -o "Control_ECU2.elf"  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU2.elf  >"Control_ECU2.lss"
+Finished building: Control_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9624 bytes (58.7% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:43:16 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13304 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:44:37 **** Incremental Build of configuration Debug for project Control_ECU2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9624 bytes (58.7% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:44:38 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+Finished building: ../HMI_functions.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+Finished building: ../Timer.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13298 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:30 **** Clean-only build of configuration Debug for project Control_ECU ****
+make clean 
+rm -rf  ./Buzzer.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MAIN2.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o  sizedummy  Control_ECU2.lss  ./Buzzer.d ./Control_functions.d ./EEPROM.d ./I2C.d ./MAIN2.d ./MOTOR.d ./Timer.d ./USART.d ./gpio.d  Control_ECU2.elf
+ 
+15:02:31 **** Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Buzzer.d" -MT"Buzzer.o" -c -o "Buzzer.o" "../Buzzer.c"
+In file included from ../Buzzer.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Buzzer.c
+ 
+Building file: ../Control_Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_Main.d" -MT"Control_Main.o" -c -o "Control_Main.o" "../Control_Main.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_Main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_Main.c
+ 
+Building file: ../Control_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Control_functions.d" -MT"Control_functions.o" -c -o "Control_functions.o" "../Control_functions.c"
+In file included from ../Control_header.h:20,
+                 from ../Control_functions.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_functions.c
+ 
+Building file: ../EEPROM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"EEPROM.d" -MT"EEPROM.o" -c -o "EEPROM.o" "../EEPROM.c"
+Finished building: ../EEPROM.c
+ 
+Building file: ../I2C.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"I2C.d" -MT"I2C.o" -c -o "I2C.o" "../I2C.c"
+Finished building: ../I2C.c
+ 
+Building file: ../MOTOR.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"MOTOR.d" -MT"MOTOR.o" -c -o "MOTOR.o" "../MOTOR.c"
+Finished building: ../MOTOR.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Buzzer.o ./Control_Main.o ./Control_functions.o ./EEPROM.o ./I2C.o ./MOTOR.o ./Timer.o ./USART.o ./gpio.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9624 bytes (58.7% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:33 **** Clean-only build of configuration Debug for project HMI_ECU ****
+make clean 
+rm -rf  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o  sizedummy  HMI_ECU2.lss  ./HMI_functions.d ./LCD.d ./MAIN.d ./Timer.d ./USART.d ./gpio.d ./keypad.d  HMI_ECU2.elf
+ 
+15:02:33 **** Build of configuration Debug for project HMI_ECU ****
+make all 
+Building file: ../HMI_Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_Main.d" -MT"HMI_Main.o" -c -o "HMI_Main.o" "../HMI_Main.c"
+Finished building: ../HMI_Main.c
+ 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+Finished building: ../HMI_functions.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+Finished building: ../Timer.c
+ 
+Building file: ../USART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"USART.d" -MT"USART.o" -c -o "USART.o" "../USART.c"
+Finished building: ../USART.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+Finished building: ../keypad.c
+ 
+Building target: HMI_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU.map -mmcu=atmega16 -o "HMI_ECU.elf"  ./HMI_Main.o ./HMI_functions.o ./LCD.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU.elf  >"HMI_ECU.lss"
+Finished building: HMI_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13298 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:56 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9624 bytes (58.7% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:02:57 **** Incremental Build of configuration Debug for project HMI_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13298 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

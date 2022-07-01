@@ -1,0 +1,91 @@
+/*
+ * MAIN2.c
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+
+#include "Control_header.h"
+#include "avr/interrupt.h"
+#include <util/delay.h>
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+/* one overflow --> 256 msec */
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_1024, NORMAL_MATCH, 0,255};
+
+extern uint8 open_flag ;
+extern uint8 close_flag;
+extern uint8 stop_flag ;
+
+
+int main()
+{
+	uint8 state = INITIAL;
+	uint8 check = WRONG;
+
+	USART_init(&config_UART);
+
+	sei();
+
+	while(1)
+	{
+		//		check = WRONG;
+		while((state == INITIAL) && (check == WRONG))
+		{
+			check = CONTROL_receivePass();
+		}
+
+		check = CONTROL_matchPassword();
+
+		if(check == MATCH)
+		{
+			while(USART_receiveByte() != READY);
+			state = USART_receiveByte();
+
+			if(state == OPEN_DOOR)
+			{
+				TIMER_SetCallBack(CONTROL_motorProcessing);
+				TIMER_init(&config_Timer);
+				if(open_flag == 0)
+				{
+					CONTROL_motorOpen();
+				}
+				else if((close_flag == 0) && (open_flag == 1))
+				{
+					CONTROL_motorClose();
+				}
+				else if((stop_flag == 0) &&(close_flag == 1))
+				{
+					CONTROL_motorStop();
+				}
+				else if (stop_flag == 1)
+				{
+					TIMER_Deinit();
+				}
+
+			}
+			else if (state == CHANGE_PASS)
+			{
+				state = INITIAL;
+				check = WRONG;
+			}
+		}
+		else if (check == ALARM)
+		{
+			BUZZER_ON();
+			_delay_ms(15000);
+			BUZZER_OFF();
+
+		}
+		else if (check == NOT_MATCH)
+		{
+			continue;
+		}
+		else
+		{
+			state = INITIAL;
+			check = WRONG;
+		}
+
+	}
+}

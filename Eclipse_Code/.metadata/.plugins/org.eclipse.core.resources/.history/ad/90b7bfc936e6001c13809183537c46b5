@@ -1,0 +1,35 @@
+/*
+ * Control_header.h
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+
+#ifndef CONTROL_HEADER_H_
+#define CONTROL_HEADER_H_
+
+#include "Buzzer.h"
+#include "EEPROM.h"
+#include "USART.h"
+#include "MOTOR.h"
+#include <string.h>
+
+#define ARRAY_SIZE 5
+#define OK 1
+#define NOT_OK 0
+#define INITIAL 6
+
+
+
+
+void Drivers_init(void);
+
+uint8 receivePassword(void);
+
+void storePassword(uint8 *pass_ptr);
+
+uint8 checkMatch(void);
+
+
+
+#endif /* CONTROL_HEADER_H_ */

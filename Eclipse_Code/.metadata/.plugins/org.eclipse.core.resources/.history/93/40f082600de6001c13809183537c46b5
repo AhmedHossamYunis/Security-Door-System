@@ -1,0 +1,72 @@
+/*
+ * Control_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "Buzzer.h"
+#include "EEPROM.h"
+#include "USART.h"
+#include "MOTOR.h"
+#include "util/delay.h"
+
+
+int main()
+{
+	USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+	uint8 received_password;
+	uint8 received_data;
+	uint8 status_writeByte;
+	uint8 status_readByte;
+	uint8 stored_password;
+	uint8 flag  =  0;
+
+	DcMotor_Init();
+	USART_init(&config_UART);
+
+	while(1)
+	{
+
+		USART_sendByte(flag);
+
+		if (flag == 0)
+		{
+			received_password = USART_receiveByte();
+			status_writeByte = EEPROM_writeByte(0x0311, received_password);
+			flag = 1;
+		}
+		else if(flag == 1)
+		{
+			received_password = USART_receiveByte();
+			status_readByte = EEPROM_readByte(0x0311, &stored_password);
+
+			if(received_password == stored_password)
+			{
+				USART_sendByte(stored_password);
+
+				USART_receiveString(&received_data);
+				if(received_data == '+')
+				{
+					DcMotor_Rotate(MOTOR_CW);
+					USART_sendString("open");
+					_delay_ms(15000);
+
+					DcMotor_Rotate(MOTOR_CCW);
+					USART_sendString("close");
+					_delay_ms(15000);
+
+				}
+				else if(received_data == '-')
+				{
+					USART_sendString("new password");
+					flag = 0;
+				}
+
+			}
+		}
+
+
+	}
+}
+

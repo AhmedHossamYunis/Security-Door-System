@@ -1,0 +1,41 @@
+/*
+ * Control_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "Control_header.h"
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_1024, NORMAL_MATCH, 0,255};
+
+int main()
+{
+	uint8 state = INITIAL;
+	uint8 check = NOT_OK;
+	uint8 notCorrectPassword = 0;
+
+	Drivers_init();
+
+	while(1)
+	{
+		check = NOT_OK;
+
+		if((state == INITIAL)&&(check == NOT_OK))
+		{
+			check = receivePassword();
+			if (check == NOT_OK)
+			{
+				notCorrectPassword++;
+				if(notCorrectPassword >= 3)
+				{
+					/*write here*/
+				}
+			}
+		}
+	}
+
+}
+
+

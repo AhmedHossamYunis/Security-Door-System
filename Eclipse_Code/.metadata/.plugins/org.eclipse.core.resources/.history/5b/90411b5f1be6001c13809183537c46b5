@@ -1,0 +1,40 @@
+/*
+ * HMI_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "KEYPAD.h"
+#include "LCD.h"
+#include "Timer.h"
+#include "USART.h"
+
+HMI_header.h;
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_8, NORMAL_MATCH, 0,255};
+
+
+/* 1- initialize new password.              --> done
+ * 2- main options                          --> done
+ * 3- open door                             --> done
+ * 4- close door							--> done
+ * 5- set password							--> done
+ * 6- confirm saved password				--> done
+ * 7- confirm passsword						--> done
+ * 8- check match.							--> done
+ * 9- enter password						--> done
+ * 10- error message during wrong key
+ * 11- user options                          --> done
+ * 12- initialize drivers                    --> done
+ *
+ * */
+
+
+
+int main()
+{
+
+}
+

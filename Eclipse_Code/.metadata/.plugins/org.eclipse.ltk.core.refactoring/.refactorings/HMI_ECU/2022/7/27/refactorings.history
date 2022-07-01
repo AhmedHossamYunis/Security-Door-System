@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;HMI_ECU/MAIN.c&apos; to &apos;HMI_Main.c&apos;" description="Rename resource &apos;MAIN.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MAIN.c" name="HMI_Main.c" stamp="1656680544349" updateReferences="true"/>
+</session>

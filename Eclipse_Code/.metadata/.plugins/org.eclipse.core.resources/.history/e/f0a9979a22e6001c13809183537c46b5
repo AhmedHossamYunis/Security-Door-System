@@ -1,0 +1,91 @@
+/*
+ * Control_functions.c
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+#include "Control_header.h"
+
+extern USART_configType config_UART;
+extern TIMER_ConfigType config_Timer;
+
+void Drivers_init(void)
+{
+	USART_init(&config_UART);
+	TIMER_init(&config_Timer);
+	sei();
+}
+
+uint8 receivePassword(void)
+{
+	uint8 pass1[ARRAY_SIZE+1];
+	uint8 pass2[ARRAY_SIZE+1];
+	uint8 check;
+
+	while(USART_receiveByte() != 1);
+	USART_receiveString(pass1);
+	while(USART_receiveByte() != 1);
+	USART_receiveString(pass2);
+
+	check = strcpy(pass1, pass2);
+
+	if (check == 0)
+	{
+		check = OK;
+		storePassword(pass1);
+		while(USART_receiveByte() != 1);
+		USART_sendByte(pass1);
+	}
+	else
+	{
+		check = NOT_OK;
+		while(USART_receiveByte() != 1);
+		USART_sendByte(NOT_OK);
+	}
+	return check;
+}
+
+void storePassword(uint8 *pass_ptr)
+{
+	uint16 i;
+
+	for(i = 0; i<ARRAY_SIZE;i++)
+	{
+		EEPROM_writeByte(i,pass_ptr[i]);
+	}
+}
+
+uint8 checkMatch(void)
+{
+	uint8 pass[ARRAY_SIZE+1];
+	uint8 currentPass[ARRAY_SIZE+1];
+	uint8 i;
+	uint8 check;
+
+	while(USART_receiveByte() != 1);
+	USART_receiveString(pass);
+
+	for(i = 0; i<ARRAY_SIZE;i++)
+	{
+		EEPROM_readByte(i,currentPass);
+	}
+	currentPass[i] = '\0';
+
+	check = strcpy(pass, currentPass);
+
+	if(check == 0)
+	{
+		check = OK;
+		while(USART_receiveByte() != 1);
+		USART_sendByte(OK);
+	}
+	else
+	{
+		check = NOT_OK;
+		while(USART_receiveByte() != 1);
+		USART_sendByte(NOT_OK);
+	}
+	return check;
+
+}
+

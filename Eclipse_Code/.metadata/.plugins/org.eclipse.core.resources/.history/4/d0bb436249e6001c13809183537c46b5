@@ -1,0 +1,53 @@
+/*
+ * HMI_functions.c
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+
+#include "HMI_header.h"
+#include <avr/interrupt.h>
+
+extern USART_configType config_UART;
+extern TIMER_ConfigType config_Timer;
+
+void HMI_driversInit(void)
+{
+	LCD_init();
+	USART_init(&config_UART);
+//	TIMER_init(&config_Timer);
+	sei();
+}
+
+
+void HMI_setNewPassword(void)
+{
+
+	char newPass_arr[ARR_SIZE + 2];
+	uint8 counter;
+
+	LCD_setCurser(0,0);
+	LCD_displayString("New Password");
+
+
+	for(counter = 0; counter < ARR_SIZE; counter++)
+	{
+		newPass_arr[counter] = KEYPAD_getPressedKey();
+		_delay_ms(500);
+		LCD_setCurser(1,counter);
+		LCD_sendData('*');
+
+
+
+	}
+
+	newPass_arr[counter] = '#';
+	counter++;
+	newPass_arr[counter] = '\0';
+
+	USART_sendByte(READY);
+	USART_sendString(newPass_arr);
+
+	return;
+
+}

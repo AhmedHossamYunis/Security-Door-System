@@ -1,0 +1,42 @@
+/*
+ * Control_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "Buzzer.h"
+#include "EEPROM.h"
+#include "USART.h"
+#include "MOTOR.h"
+#define ARRAY_SIZE 5
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_8, NORMAL_MATCH, 0,255};
+
+
+int main()
+{
+
+
+}
+
+
+void Drivers_init(void)
+{
+	USART_init(&config_UART);
+	TIMER_init(&config_Timer);
+	sei();
+}
+
+uint8 receivePassword(void)
+{
+	uint8 pass1[ARRAY_SIZE+1];
+	uint8 pass2[ARRAY_SIZE+1];
+
+	while(USART_receiveByte() != 1);
+	USART_receiveString(pass1);
+	while(USART_receiveByte() != 1);
+	USART_receiveString(pass2);
+
+}

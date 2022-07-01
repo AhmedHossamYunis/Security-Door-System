@@ -1,0 +1,119 @@
+/*
+ * HMI_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "HMI_header.h"
+
+
+int main()
+{
+	USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+	/* one overflow --> 256 msec */
+//	TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_1024, NORMAL_MATCH, 0,255};
+
+	uint8 state = INITIAL;
+	uint8 check = WRONG;
+	uint8 errorPass = 0;
+
+	LCD_init();
+	USART_init(&config_UART);
+	//		TIMER_init(&config_Timer);
+	sei();
+
+	while(1)
+	{
+//		check = WRONG;
+
+		while((state == INITIAL) && (check == WRONG))
+		{
+
+			HMI_setNewPassword();
+			HMI_confirmPass();
+			check = HMI_matchPass();
+
+			if(check == NOT_MATCH)
+			{
+				LCD_clearScreen();
+				LCD_displayStringRowColumn(0,0, "In valid pass");
+				LCD_displayStringRowColumn(1,0, "Try again");
+				_delay_ms(500);
+			}
+			else if(check == MATCH)
+			{
+				LCD_clearScreen();
+				LCD_displayStringRowColumn(0,0, "success");
+				_delay_ms(500);
+				break;
+			}
+
+		}
+
+		check = HMI_enterPass();
+		LCD_intgerToString(check);
+		_delay_ms(50000);
+
+
+		if(check == MATCH)
+		{
+			HMI_mainOption();
+
+			state = HMI_chooseOption();
+
+			if(state == OPEN_DOOR)
+			{
+				HMI_openDoor();
+				_delay_ms(30000);
+				HMI_closeDoor();
+				_delay_ms(30000);
+			}
+			else if (state == CHANGE_PASS)
+			{
+
+				state = INITIAL;
+				check = WRONG;
+			}
+			else
+			{
+				state = NOT_INITIAL;
+				LCD_clearScreen();
+				LCD_displayStringRowColumn(0,0, "In valid input");
+				LCD_displayStringRowColumn(1,0, "Try again");
+				_delay_ms(500);
+			}
+
+		}
+		else
+		{
+			if(errorPass >= 3)
+			{
+				USART_sendByte(ALARM);
+				LCD_clearScreen();
+				LCD_displayStringRowColumn(0,0, "In valid pass");
+				_delay_ms(500);
+				errorPass = 0;
+				break;
+			}
+			else
+			{
+				errorPass++;
+				state = NOT_INITIAL;
+				LCD_clearScreen();
+				LCD_displayStringRowColumn(0,0, "In valid pass");
+				LCD_displayStringRowColumn(1,0, "Try again");
+				_delay_ms(500);
+
+			}
+		}
+
+
+
+
+
+
+	}
+
+}
+

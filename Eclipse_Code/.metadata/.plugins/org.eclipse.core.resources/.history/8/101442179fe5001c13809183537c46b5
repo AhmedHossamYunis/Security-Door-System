@@ -1,0 +1,96 @@
+/*
+============================================================================
+ Name        : Timer.c
+ Data        : 5 - 6 -2022
+ Author      : Ahmed_Hossam
+ Description : Timer Driver
+ ============================================================================
+ */
+
+
+#include "Timer.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include "common_macros.h"
+/*******************************************************************************
+ *                           Global Variables                                  *
+ *******************************************************************************/
+
+static volatile void (*g_callBack_ptr)(void) = NULL_PTR;
+
+/*******************************************************************************
+ *                       Interrupt Service Routines                            *
+ *******************************************************************************/
+ISR(INT0_vect)
+{
+	if(g_callBack_ptr != NULL_PTR)
+	{
+		/* Call the call back function in the application after counting the required time*/
+		(*g_callBack_ptr)();
+	}
+}
+
+/*******************************************************************************
+ *                      Functions Definitions                                  *
+ *******************************************************************************/
+/*Description:
+ *   1- Set Non-PWM mode
+ *   2- Insert the required mode.
+ *   3- Insert the required compare match mode.
+ *   4- Insert the required prescaler.
+ *   5- Insert the required initial time value.
+ *   6- Insert the compare mode time value in case of Compare mode is inserted.
+ *   7- Enable timer interrupt module.
+ **/
+void TIMER_init(const TIMER_ConfigType *config){
+	/*Non PWM mode*/
+	SET_BIT(TCCR0,FOC0);
+
+	/*Insert the required mode */
+	TCCR0 = (TCCR0 & 0xB7) | ((config->mode)<<3);
+
+	/*Insert the required the compare output mode*/
+	TCCR0 = (TCCR0 & 0xCF) | ((config->compareMatch)<<4);
+
+	/*Insert the required prescaler*/
+	TCCR0 = (TCCR0 & 0xF8) | ((config->prescaler));
+
+	/*Insert the required initial time value*/
+	TCNT0 = config->Timer_Initial_Time_Value;
+
+	if ((config->mode) == COMPARE)
+	{
+		/*Insert the required compare time value.*/
+		OCR0 = config->Timer_Compare_Time_Value;
+
+		/*Enable interrupt for compare mode*/
+		SET_BIT(TIMSK, OCIE0);
+	}
+	else
+	{
+		/*Enable interrupt for normal mode*/
+		SET_BIT(TIMSK, TOIE0);
+	}
+
+	return;
+}
+
+/*Description:
+ *   1- Stop timer
+ *  */
+void TIMER_Deinit(void)
+{
+	TCCR0 = 0;
+	TIMSK = 0;
+}
+
+/*Description:
+ *   Function to set call back function address.
+ * */
+void TIMER_SetCallBack(void(*a_ptr)(void))
+{
+	/* Save the address of the Call back function in a global variable */
+	g_callBack_ptr = a_ptr;
+}
+
+

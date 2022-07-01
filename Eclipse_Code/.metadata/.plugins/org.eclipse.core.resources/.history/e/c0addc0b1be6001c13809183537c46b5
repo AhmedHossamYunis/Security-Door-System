@@ -1,0 +1,19 @@
+/*
+ * HMI_header.h
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+
+#ifndef HMI_HEADER_H_
+#define HMI_HEADER_H_
+
+#define ARRAY_SIZE 5
+#define WRONG 0
+#define OPEN_DOOR 1
+#define CHANGE_PASSWORD 2
+#define START_SEND 3
+#define NOT_START_SEND 4
+
+
+#endif /* HMI_HEADER_H_ */

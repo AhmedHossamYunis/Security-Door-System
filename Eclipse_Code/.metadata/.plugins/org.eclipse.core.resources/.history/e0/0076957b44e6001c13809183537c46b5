@@ -1,0 +1,37 @@
+/*
+ * HMI_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "HMI_header.h"
+
+USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+/* one overflow --> 256 msec */
+TIMER_ConfigType config_Timer = {NORMAL_MODE, F_CPU_1024, NORMAL_MATCH, 0,255};
+
+
+int main()
+{
+//	uint8 state = INITIAL;
+//	uint8 check = WRONG;
+//	LCD_setCurser(0,0);
+	LCD_displayString("New Password");
+
+
+	HMI_driversInit();
+
+	while(1)
+	{
+//		check = WRONG;
+//
+//		while((state == INITIAL) && (check == WRONG))
+//		{
+//
+//			HMI_setNewPassword();
+//		}
+	}
+
+}
+

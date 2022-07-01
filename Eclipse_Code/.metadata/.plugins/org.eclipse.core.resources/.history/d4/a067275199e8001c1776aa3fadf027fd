@@ -1,0 +1,112 @@
+/*
+ * Control_functions.c
+ *
+ *  Created on: Jun 7, 2022
+ *      Author: ahmed
+ */
+#include "Control_header.h"
+#include <util/delay.h>
+#include <string.h>
+
+uint8 g_tick;
+uint8 open_flag = 0;
+uint8 close_flag = 0;
+uint8 stop_flag = 0;
+
+uint8 CONTROL_receivePass(void)
+{
+	char pass1_arr[ARR_SIZE+1];
+	char pass2_arr[ARR_SIZE+1];
+	uint8 check;
+
+	while(USART_receiveByte() != READY){};
+	USART_receiveString(pass1_arr);
+
+	while(USART_receiveByte() != READY){};
+	USART_receiveString(pass2_arr);
+
+	check = strcmp(pass1_arr, pass2_arr);
+
+	if (check == 0)
+	{
+
+		storePassword(pass1_arr);
+		while(USART_receiveByte() != READY);
+		USART_sendByte(MATCH);
+		return MATCH;
+	}
+	else
+	{
+
+		while(USART_receiveByte() != READY);
+		USART_sendByte(WRONG);
+		return WRONG;
+
+	}
+
+
+}
+
+void storePassword(char *pass_ptr)
+{
+	uint16 i;
+
+	for(i = 0; i<ARR_SIZE;i++)
+	{
+		EEPROM_writeByte(i,pass_ptr[i]);
+		_delay_ms(10);
+	}
+}
+
+uint8 CONTROL_matchPassword(void)
+{
+	char passIsMatch_arr[ARR_SIZE+1];
+	char storedPAss_arr[ARR_SIZE+1];
+	uint8 counter;
+	uint8 checkMatch;
+
+	while(USART_receiveByte() != READY);
+	USART_receiveString(passIsMatch_arr);
+
+	for(counter = 0; counter < ARR_SIZE; counter++ )
+	{
+		EEPROM_readByte(counter,&storedPAss_arr[counter]);
+		_delay_ms(5);
+	}
+	storedPAss_arr[counter] = '\0';
+
+	checkMatch = strcmp(passIsMatch_arr, storedPAss_arr);
+
+	if(checkMatch == 0)
+	{
+		while(USART_receiveByte() != READY);
+		USART_sendByte(MATCH);
+		return MATCH;
+	}
+	else
+	{
+		while(USART_receiveByte() != READY);
+		USART_sendByte(NOT_MATCH);
+		return NOT_MATCH;
+
+	}
+}
+
+void CONTROL_motorProcessing(void)
+{
+	g_tick++;
+	if (g_tick >= OPEN_MOTOR_TIMER_PER_SECOND)
+	{
+		open_flag = 1;
+	}
+	else if((g_tick > OPEN_MOTOR_TIMER_PER_SECOND)&&(g_tick <= CLOSE_MOTOR_TIMER_PER_SECOND))
+	{
+		close_flag = 2;
+	}
+	else if(g_tick > STOP_MOTOR_TIMER_PER_SECOND)
+	{
+		stop_flag = 3;
+		g_tick = 0;
+
+	}
+}

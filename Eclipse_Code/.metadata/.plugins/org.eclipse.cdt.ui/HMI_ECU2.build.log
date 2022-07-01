@@ -1,0 +1,39 @@
+14:44:38 **** Incremental Build of configuration Debug for project HMI_ECU2 ****
+make all 
+Building file: ../HMI_functions.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"HMI_functions.d" -MT"HMI_functions.o" -c -o "HMI_functions.o" "../HMI_functions.c"
+Finished building: ../HMI_functions.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+Finished building: ../Timer.c
+ 
+Building target: HMI_ECU2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HMI_ECU2.map -mmcu=atmega16 -o "HMI_ECU2.elf"  ./HMI_functions.o ./LCD.o ./MAIN.o ./Timer.o ./USART.o ./gpio.o ./keypad.o   
+Finished building target: HMI_ECU2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HMI_ECU2.elf  >"HMI_ECU2.lss"
+Finished building: HMI_ECU2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 HMI_ECU2.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13298 bytes (81.2% Full)
+(.text + .data + .bootloader)
+
+Data:        270 bytes (26.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:44:38 Build Finished. 0 errors, 0 warnings. (took 841ms)
+

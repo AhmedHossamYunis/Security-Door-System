@@ -1,0 +1,20 @@
+/*
+ * Control_ECU.c
+ *
+ *  Created on: Jun 6, 2022
+ *      Author: ahmed
+ */
+
+#include "Buzzer.h"
+#include "EEPROM.h"
+#include "USART.h"
+#include "MOTOR.h"
+
+
+int main()
+{
+	USART_configType config_UART = {9600, DISABLED, ONE_BIT, EIGHT_BITS};
+	USART_init(&config_UART);
+
+}
+
